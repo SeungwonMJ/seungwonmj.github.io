@@ -122,28 +122,55 @@
                             <h3 class="project-title">10 Seconds: Academic Paper Search & Recommendation Service</h3>
                             <p class="project-source">Naver BoostCamp AI Tech 8th</p>
                             <p class="project-date">January 2026 - February 2026</p>
-                            <p>Led infrastructure setup, backend development, and system integration as team leader for 10 Seconds, a short-form UI academic paper search and recommendation service built on 12,777 NLP papers. Provisioned AWS EC2/RDS infrastructure with IAM-based access control, developed a FAISS vector search API for real-time similarity search, and designed a personalized recommendation system combining event-weighted user vectors (likes, bookmarks, clicks via Dirty Flag updates) with multi-source scoring across vector similarity (45%), source reliability (35%), and recency (20%). Selected the optimal embedding model from a 7-model benchmark (Solon-embeddings-large-0.1, MAP@10: 0.5147, latency 26.7ms).</p>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Led infrastructure setup as team leader, provisioning AWS EC2/RDS with IAM-based access control for a short-form UI paper search service built on 12,777 NLP papers.</li>
+                                    <li>Developed a FAISS vector search API for real-time similarity search and designed a multi-source scoring system combining vector similarity (45%), source reliability (35%), and recency (20%).</li>
+                                    <li>Implemented personalized recommendations using event-weighted user vectors (likes, bookmarks, clicks) with asynchronous Dirty Flag updates to reflect real-time preference changes.</li>
+                                    <li>Coordinated end-to-end debugging and cross-team communication across frontend, backend, and ML pipeline to ensure stable service deployment on Vercel and AWS.</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="project-item">
                             <h3 class="project-title">CSAT AI: Korean College Scholastic Ability Test Solver</h3>
                             <p class="project-source">Naver BoostCamp AI Tech 8th</p>
                             <p class="project-date">December 2025 - January 2026</p>
-                            <p>Contributed to base model experimentation, Dynamic RAG pipeline implementation, EDA-based data labeling, and prompt engineering for a system designed to solve Korean CSAT problems using large language models. Applied EDA to classify problems into 4 cases by passage solvability and reasoning type, enabling type-specific inference strategies. Built a Dynamic RAG pipeline (LLM keyword extraction → Wikipedia retrieval → FAISS vector search) with a caching system to reduce redundant API calls. Combined LoRA fine-tuning of EXAONE 4.0 32B with CoT prompt engineering to achieve a final Private Macro F1 of 0.6669.</p>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Built a Dynamic RAG pipeline (LLM keyword extraction → Wikipedia retrieval → FAISS vector search) to replace static knowledge bases with problem-specific retrieval.</li>
+                                    <li>Implemented a Wikipedia API caching system to eliminate redundant requests and accelerate large-scale experiments.</li>
+                                    <li>Applied EDA to classify problems into 4 cases by passage solvability and reasoning type, enabling type-specific inference strategies across the dataset.</li>
+                                    <li>Achieved a final Private Macro F1 of 0.6669 using EXAONE 4.0 32B with LoRA fine-tuning and Chain-of-Thought prompt engineering.</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="project-item">
                             <h3 class="project-title">Open-Domain MRC: Wikipedia-based Machine Reading Comprehension</h3>
                             <p class="project-source">Naver BoostCamp AI Tech 8th</p>
                             <p class="project-date">December 2025</p>
-                            <p>Contributed base model selection and reader ensemble design for an end-to-end open-domain MRC system leveraging a large-scale Wikipedia corpus. Conducted individual performance tests on 5 Korean NLP models to guide base model selection, then applied Error Diversity theory to design a Soft Voting ensemble (RoBERTa-large + BigBird-base, weight 0.55:0.45 via Grid Search), achieving F1 +0.80 over baseline. The team's best configuration combining BM25 + bge-m3 Hybrid Retrieval with Komoran morpheme tokenization reached EM 65.00% / F1 75.95%.</p>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Conducted individual performance tests on 5 Korean NLP models to guide team base model selection (klue/roberta-large).</li>
+                                    <li>Applied Error Diversity theory to design a Soft Voting ensemble (RoBERTa-large + BigBird-base, 0.55:0.45) via Grid Search, achieving F1 +0.80 over baseline.</li>
+                                    <li>Streamlined team experiments via shell script automation and server capacity monitoring to maintain environment stability.</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="project-item">
                             <h3 class="project-title">Korean Movie Review Sentiment Classification</h3>
                             <p class="project-source">Naver BoostCamp AI Tech 8th</p>
                             <p class="project-date">October 2025 - November 2025</p>
-                            <p>Independently designed and validated a heterogeneous ensemble strategy for 4-class Korean sentiment classification. Selected BERT, KcBERT, and KoELECTRA based on their complementary architectures, implemented 5-Fold Cross Validation Soft Voting ensemble to achieve Public F1 0.8314 (+3.0%p over single-model baseline), and conducted automated hyperparameter search with Optuna (~31 hours, 5 trials per model). Established WandB-based experiment tracking for systematic performance comparison.</p>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Designed a heterogeneous ensemble of BERT, KcBERT, and KoELECTRA based on their complementary architectures (bidirectional context / SNS-specialized / Discriminator-based).</li>
+                                    <li>Implemented 5-Fold Cross Validation Soft Voting ensemble, achieving Public F1 0.8314 (+3.0%p over single BERT baseline of 0.8074).</li>
+                                    <li>Conducted automated hyperparameter search with Optuna (~31 hours, 5 trials per model) to identify optimal learning rate and batch size per model.</li>
+                                    <li>Verified that individually optimizing each model's hyperparameters reduces ensemble diversity, causing overall performance to drop — confirming the importance of ensemble-level design.</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="project-item">

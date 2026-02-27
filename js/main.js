@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const offset = currentIndex * (itemWidth + gap);
         track.style.transform = `translateX(-${offset}px)`;
 
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex >= getMaxIndex();
+        prevBtn.disabled = false;
+        nextBtn.disabled = false;
 
         // Update dots
         document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
@@ -76,15 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
     prevBtn.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
-            updateCarousel();
+        } else {
+            currentIndex = getMaxIndex();
         }
+        updateCarousel();
     });
 
     nextBtn.addEventListener('click', () => {
         if (currentIndex < getMaxIndex()) {
             currentIndex++;
-            updateCarousel();
+        } else {
+            currentIndex = 0;
         }
+        updateCarousel();
     });
 
     // Touch/swipe support
@@ -99,10 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
         touchEndX = e.changedTouches[0].screenX;
         const diff = touchStartX - touchEndX;
         if (Math.abs(diff) > 50) {
-            if (diff > 0 && currentIndex < getMaxIndex()) {
-                currentIndex++;
-            } else if (diff < 0 && currentIndex > 0) {
-                currentIndex--;
+            if (diff > 0) {
+                currentIndex = currentIndex < getMaxIndex() ? currentIndex + 1 : 0;
+            } else {
+                currentIndex = currentIndex > 0 ? currentIndex - 1 : getMaxIndex();
             }
             updateCarousel();
         }

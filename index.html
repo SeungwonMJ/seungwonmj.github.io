@@ -113,43 +113,86 @@
         <div class="container">
             <h2>Projects</h2>
             
-            <div class="projects-grid">
-                <div class="project-item">
-                    <h3 class="project-title">EmaiLLM: Bulk Cleanser</h3>
-                    <p class="project-tech">Computational Linguistics</p>
-                    <p class="project-date">January 2025 - May 2025</p>
-                    <p>Directed frontend engineering and contributed to backend logic for EmaiLLM, a web application allowing users to personalize email organization with automated tagging with 74% accuracy, keyword-driven inbox folders dynamically updated through a RESTful API, and efficient inbox cleanup by selective email download and deletion.</p>
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-btn-prev" aria-label="Previous projects">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track">
+                        <div class="project-item">
+                            <h3 class="project-title">10 Seconds: Academic Paper Search & Recommendation Service</h3>
+                            <p class="project-tech">Naver BoostCamp AI Tech 8th</p>
+                            <p class="project-date">January 2026 - February 2026</p>
+                            <p>Led infrastructure setup, backend development, and system integration as team leader for 10 Seconds, a short-form UI academic paper search and recommendation service built on 12,777 NLP papers. Provisioned AWS EC2/RDS infrastructure with IAM-based access control, developed a FAISS vector search API for real-time similarity search, and designed a personalized recommendation system combining event-weighted user vectors (likes, bookmarks, clicks via Dirty Flag updates) with multi-source scoring across vector similarity (45%), source reliability (35%), and recency (20%). Selected the optimal embedding model from a 7-model benchmark (Solon-embeddings-large-0.1, MAP@10: 0.5147, latency 26.7ms).</p>
+                            <a href="#" class="project-link" target="_blank">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+
+                        <div class="project-item">
+                            <h3 class="project-title">CSAT AI: Korean College Scholastic Ability Test Solver</h3>
+                            <p class="project-tech">Naver BoostCamp AI Tech 8th</p>
+                            <p class="project-date">December 2025 - January 2026</p>
+                            <p>Contributed to base model experimentation, Dynamic RAG pipeline implementation, EDA-based data labeling, and prompt engineering for a system designed to solve Korean CSAT problems using large language models. Applied EDA to classify problems into 4 cases by passage solvability and reasoning type, enabling type-specific inference strategies. Built a Dynamic RAG pipeline (LLM keyword extraction → Wikipedia retrieval → FAISS vector search) with a caching system to reduce redundant API calls. Combined LoRA fine-tuning of EXAONE 4.0 32B with CoT prompt engineering to achieve a final Private Macro F1 of 0.6669.</p>
+                            <a href="#" class="project-link" target="_blank">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+
+                        <div class="project-item">
+                            <h3 class="project-title">Open-Domain MRC: Wikipedia-based Machine Reading Comprehension</h3>
+                            <p class="project-tech">Naver BoostCamp AI Tech 8th</p>
+                            <p class="project-date">December 2025</p>
+                            <p>Contributed base model selection and reader ensemble design for an end-to-end open-domain MRC system leveraging a large-scale Wikipedia corpus. Conducted individual performance tests on 5 Korean NLP models to guide base model selection, then applied Error Diversity theory to design a Soft Voting ensemble (RoBERTa-large + BigBird-base, weight 0.55:0.45 via Grid Search), achieving F1 +0.80 over baseline. The team's best configuration combining BM25 + bge-m3 Hybrid Retrieval with Komoran morpheme tokenization reached EM 65.00% / F1 75.95%.</p>
+                            <a href="#" class="project-link" target="_blank">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+
+                        <div class="project-item">
+                            <h3 class="project-title">Korean Movie Review Sentiment Classification</h3>
+                            <p class="project-tech">Naver BoostCamp AI Tech 8th</p>
+                            <p class="project-date">October 2025 - November 2025</p>
+                            <p>Independently designed and validated a heterogeneous ensemble strategy for 4-class Korean sentiment classification. Selected BERT, KcBERT, and KoELECTRA based on their complementary architectures, implemented 5-Fold Cross Validation Soft Voting ensemble to achieve Public F1 0.8314 (+3.0%p over single-model baseline), and conducted automated hyperparameter search with Optuna (~31 hours, 5 trials per model). Established WandB-based experiment tracking for systematic performance comparison.</p>
+                            <a href="#" class="project-link" target="_blank">View Report (PDF) <i class="fas fa-file-pdf"></i></a>
+                        </div>
+
+                        <div class="project-item">
+                            <h3 class="project-title">EmaiLLM: Bulk Cleanser</h3>
+                            <p class="project-tech">Computational Linguistics</p>
+                            <p class="project-date">January 2025 - May 2025</p>
+                            <p>Directed frontend engineering and contributed to backend logic for EmaiLLM, a web application allowing users to personalize email organization with automated tagging with 74% accuracy, keyword-driven inbox folders dynamically updated through a RESTful API, and efficient inbox cleanup by selective email download and deletion.</p>
+                        </div>
+
+                        <div class="project-item">
+                            <h3 class="project-title">Heart Attack Risk Prediction</h3>
+                            <p class="project-tech">Data Mining, Python, scikit-learn</p>
+                            <p class="project-date">January 2025 - May 2025</p>
+                            <p>Leveraged Python and scikit-learn to build a logistic regression model achieving 84% accuracy in heart disease prediction, contributing critical age-stratified risk analysis that provided key insights for a collaborative data mining research paper.</p>
+                        </div>
+
+                        <div class="project-item">
+                            <h3 class="project-title">Privacy Auditing with Single-Run Methods</h3>
+                            <p class="project-tech">Deep Learning</p>
+                            <p class="project-date">August 2024 - December 2024</p>
+                            <p>Conducted thorough theoretical research on enhancements for single-run method algorithms in privacy auditing, proposing specific optimization strategies aimed at improving detection accuracy and efficiency.</p>
+                        </div>
+
+                        <div class="project-item">
+                            <h3 class="project-title">League of Legends Game Companion App</h3>
+                            <p class="project-tech">HTML, CSS, AWS EC2</p>
+                            <p class="project-date">January 2024 - May 2024</p>
+                            <p>Led frontend development in a Scrum-based team to build a responsive website using Django, HTML, and CSS. The site allowed users to download a game companion app that provides real-time in-game status and strategic suggestions, and it was deployed on an Ubuntu server through AWS EC2 for public access.</p>
+                        </div>
+
+                        <div class="project-item">
+                            <h3 class="project-title">Video Game Sales Forecasting</h3>
+                            <p class="project-tech">Machine Learning</p>
+                            <p class="project-date">August 2023 - December 2023</p>
+                            <p>Developed a machine learning model implementing pair programming to forecast video game sales based on various factors and identified key influences by examining effectiveness of different machine learning techniques.</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="project-item">
-                    <h3 class="project-title">Heart Attack Risk Prediction</h3>
-                    <p class="project-tech">Data Mining, Python, scikit-learn</p>
-                    <p class="project-date">January 2025 - May 2025</p>
-                    <p>Leveraged Python and scikit-learn to build a logistic regression model achieving 84% accuracy in heart disease prediction, contributing critical age-stratified risk analysis that provided key insights for a collaborative data mining research paper.</p>
-                </div>
-                
-                <div class="project-item">
-                    <h3 class="project-title">Privacy Auditing with Single-Run Methods</h3>
-                    <p class="project-tech">Deep Learning</p>
-                    <p class="project-date">August 2024 - December 2024</p>
-                    <p>Conducted thorough theoretical research on enhancements for single-run method algorithms in privacy auditing, proposing specific optimization strategies aimed at improving detection accuracy and efficiency.</p>
-                </div>
-                
-                <div class="project-item">
-                    <h3 class="project-title">League of Legends Game Companion App</h3>
-                    <p class="project-tech">HTML, CSS, AWS EC2</p>
-                    <p class="project-date">January 2024 - May 2024</p>
-                    <p>Led frontend development in a Scrum-based team to build a responsive website using Django, HTML, and CSS. The site allowed users to download a game companion app that provides real-time in-game status and strategic suggestions, and it was deployed on an Ubuntu server through AWS EC2 for public access.</p>
-                </div>
-                
-                <div class="project-item">
-                    <h3 class="project-title">Video Game Sales Forecasting</h3>
-                    <p class="project-tech">Machine Learning</p>
-                    <p class="project-date">August 2023 - December 2023</p>
-                    <p>Developed a machine learning model implementing pair programming to forecast video game sales based on various factors and identified key influences by examining effectiveness of different machine learning techniques.</p>
-                </div>
+                <button class="carousel-btn carousel-btn-next" aria-label="Next projects">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-            
+            <div class="carousel-dots"></div>
+
             <div style="text-align: center; margin-top: 30px;">
                 <a href="https://github.com/SeungwonMJ/" target="_blank" class="project-link">See samples of my code on GitHub <i class="fas fa-external-link-alt"></i></a>
             </div>

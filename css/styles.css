@@ -251,28 +251,98 @@ h2 {
     color: #0070f3;
 }
 
-/* Projects Section */
+/* Projects Section - Carousel */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carousel-track-wrapper {
+    overflow: hidden;
+    flex: 1;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+    gap: 20px;
+}
+
 .project-item {
     border: 1px solid #eaeaea;
     border-radius: 8px;
     padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s;
 }
 
 .project-item:hover {
-    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 30px;
+.carousel-btn {
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background-color: #0070f3;
+    color: white;
+    border-color: #0070f3;
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-btn:disabled:hover {
+    background: white;
+    color: #333;
+    border-color: #eaeaea;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-dot.active {
+    background-color: #0070f3;
 }
 
 .project-link {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: auto;
+    padding-top: 10px;
     color: #0070f3;
     text-decoration: none;
     font-weight: 500;
@@ -316,8 +386,8 @@ footer {
 
 /* Medium screens */
 @media (max-width: 992px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .project-item {
+        flex: 0 0 calc((100% - 20px) / 2);
     }
 }
 
@@ -335,8 +405,14 @@ footer {
         font-size: 2.5rem;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .project-item {
+        flex: 0 0 100%;
+    }
+
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
     }
 }
 

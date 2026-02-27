@@ -182,7 +182,14 @@
                             <h3 class="project-title">Privacy Auditing with Single-Run Methods</h3>
                             <p class="project-source">Emory University</p>
                             <p class="project-date">August 2024 - December 2024</p>
-                            <p>Conducted thorough theoretical research on enhancements for single-run method algorithms in privacy auditing, proposing specific optimization strategies aimed at improving detection accuracy and efficiency.</p>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Conducted theoretical research on improving Steinke et al.'s single-run privacy auditing framework, which reduces computational overhead in differential privacy (DP) auditing by eliminating the need for multiple training runs.</li>
+                                    <li>Proposed integrating Likelihood Ratio Attack (LiRA) and Transfer Learning Attack (TLA) into the auditing pipeline to enhance Membership Inference Attack precision and close the gap between empirical privacy loss estimates and theoretical bounds.</li>
+                                    <li>Analyzed Rényi Differential Privacy (RDP) as a replacement for standard DP accounting, demonstrating theoretically that RDP's finer divergence measure can tighten privacy loss bounds in DP-SGD training.</li>
+                                    <li>Designed experimental settings using ResNet-18 on CIFAR-10/100 to validate the proposed optimizations, evaluating attack success rate and privacy parameter ε across four privacy mechanisms.</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="project-item">
@@ -203,7 +210,14 @@
                             <h3 class="project-title">Video Game Sales Forecasting</h3>
                             <p class="project-source">Emory University</p>
                             <p class="project-date">August 2023 - December 2023</p>
-                            <p>Developed a machine learning model implementing pair programming to forecast video game sales based on various factors and identified key influences by examining effectiveness of different machine learning techniques.</p>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Designed project scope and selected an ensemble of 6 ML models (Decision Tree, Random Forest, Gradient Boosting, MLP, Elastic Net, Bayesian Ridge) to forecast global video game sales from 16,598 VGChartz titles.</li>
+                                    <li>Led data preprocessing pipeline including missing value handling, one-hot encoding of categorical variables (platform, genre, publisher), and proportional regional sales normalization to prevent target leakage.</li>
+                                    <li>Applied GridSearchCV hyperparameter tuning across all models; tree-based models achieved best performance with Decision Tree R² 87.57%, Gradient Boosting R² 87.04%, and ensemble R² 86.96%.</li>
+                                    <li>Analyzed model results and identified that title text embeddings (DistilBERT + PCA) degraded tree-based performance, concluding that transformer embeddings introduce noise in sparse tabular regression tasks.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

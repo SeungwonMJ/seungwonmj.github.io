@@ -230,21 +230,21 @@ h2 {
     margin-bottom: 10px;
 }
 
-.experience-description {
+.experience-description, .project-description {
     margin-bottom: 15px;
 }
 
-.experience-description ul {
+.experience-description ul, .project-description ul {
     list-style-type: none;
 }
 
-.experience-description li {
+.experience-description li, .project-description li {
     margin-bottom: 5px;
     padding-left: 20px;
     position: relative;
 }
 
-.experience-description li:before {
+.experience-description li:before, .project-description li:before {
     content: "•";
     position: absolute;
     left: 0;
